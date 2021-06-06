@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lecture2.Models.Admin">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAQABAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.CertificateLevel">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAAAAAAAAIAAAAAAAUAAAAAAAEAAAQAAAAA=</HashCode>
+      <FileName>Models\CertificateLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.DiveCertificate">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAIAAAAAAAAAAAACAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\DiveCertificate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.DiveLog">
+    <Position X="16" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAQAAAAAAAAAAAMAAEAAACCCEAAAAAA=</HashCode>
+      <FileName>Models\DiveLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.DiveMeasurement">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAABAAAAIAAAAAAQACAAAAAAEAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\DiveMeasurement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.Diver">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIEAAAAEQAAAQABAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Diver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.Notification">
+    <Position X="12.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Notification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.OxygenCalc">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAgAAAAEACAAAAAAAAAACAAAAAgAA=</HashCode>
+      <FileName>Models\OxygenCalc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture2.Models.User">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAEAAAAAAAAAAAAAAACAACAAAQAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

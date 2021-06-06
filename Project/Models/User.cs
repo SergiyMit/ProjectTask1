@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class User
+    public class User : IInfo
     {
         private int IdUser;
         public string Login { get; set; }
@@ -18,7 +19,7 @@ namespace Lecture2.Models
             Password = password;
             UserType = type;
         }
-        public virtual void DisplayInfo()
+        public virtual void GetInfo()
         {
 
         }

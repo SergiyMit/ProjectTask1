@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class Diver : User
+    public class Diver : User, IInfo
     {
         private int IdDiver;
         public string Name { get; set; }
@@ -24,7 +25,7 @@ namespace Lecture2.Models
             TelNumber = telnumber;
             DeviceNumber = devicenumber;
         }
-        public override void DisplayInfo()
+        public override void GetInfo()
         {
             Console.WriteLine($"Name: {this.Name}| Surname: {this.Surname}| Age {this.Age}");
         }

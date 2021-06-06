@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class DiveLog 
+    public class DiveLog : IInfo
     {
         private int IdDive;
         public int WeightsAmount { get; set; }
