@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    class OxygenCalc
+    class OxygenCalc : IOxygenCalculation
     {
-        public int TimeOxygen {  get; set; }
-        public int DeepOxygen {  get; set; }
+        public int TimeOxygen { get; set; }
+        public int DeepOxygen { get; set; }
         public int TankOxygen { get; set; }
         public int TankPreassure { get; set; }
-
         public OxygenCalc()
         {
         }
