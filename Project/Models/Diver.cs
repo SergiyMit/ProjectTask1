@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class Diver : User, IInfo
+    public class Diver : User, IInfo, IUser
     {
         private int IdDiver;
+        public string Login { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
