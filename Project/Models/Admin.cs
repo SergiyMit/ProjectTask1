@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class Admin : User
+    public class Admin : User, IInfo
     {
         private readonly int IdAdmin;
         public string Name { get; set; }
@@ -19,7 +20,7 @@ namespace Lecture2.Models
             Surname = surname;
             PersonalAccessCode = personalaccesscode;
         }
-        public override void DisplayInfo()
+        public override void GetInfo()
         {
             Console.WriteLine($"Name: {this.Name}| Surname: {this.Surname}");
         }
