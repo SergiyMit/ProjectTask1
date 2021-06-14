@@ -6,6 +6,7 @@ using System.Text.Json;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Project
 {
@@ -19,8 +20,9 @@ namespace Project
             List < Diver > divers = new List<Diver>();
             divers.Add(diver1);
             divers.Add(diver2);
-            SaveDiverInfo(divers);
-            LoadDiverInfo();
+            AsynSaveDiverInfo(divers);
+            AsyncLoadDiverInfo();
+            Console.WriteLine("------------------");
             Console.ReadLine();
 
 
@@ -69,12 +71,17 @@ namespace Project
         public static void SaveDiverInfo(List<Diver> divers)
         {
             string json = JsonConvert.SerializeObject(divers);
+            Thread.Sleep(3000);
             using (FileStream fs = new FileStream("diver.json", FileMode.OpenOrCreate)) ;
             using (StreamWriter writer = new StreamWriter("diver.json"))
             {
                 writer.WriteLine(json);
             }
 
+        }
+        public async static Task AsynSaveDiverInfo(List<Diver> divers)
+        {
+            Task.Run(() => SaveDiverInfo(divers));
         }
         public static List<Diver> LoadDiverInfo()
         {
@@ -94,6 +101,10 @@ namespace Project
                 return divers;
             }
             
+        }
+        public async static Task<List<Diver>> AsyncLoadDiverInfo()
+        {
+            return await Task.Run(() => LoadDiverInfo());
         }
     }
 }
