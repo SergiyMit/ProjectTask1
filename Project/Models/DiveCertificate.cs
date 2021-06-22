@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class DiveCertificate
+    public partial class DiveCertificate
     {
-        private int IdCertificate;
+        public int IdCertificate { get; set; }
         public string CertNumber { get; set; }
-        public DateTime DateOfIssuance { get; set; }
-        public Diver Diver { get; set; }
-        public CertificateLevel CertificateLevel { get; set; }
-        public DiveCertificate(string certnumber, DateTime dateofissuance, Diver diver, CertificateLevel certificatelevel)
+        public DateTime? DateOfIssuance { get; set; }
+        public int? IdLevel { get; set; }
+        public int? IdDiver { get; set; }
+
+        public virtual Diver IdDiverNavigation { get; set; }
+        public virtual CertificateLevel IdLevelNavigation { get; set; }
+        public DiveCertificate(string certnumber, DateTime dateofissuance)
         {
             CertNumber = certnumber;
             DateOfIssuance = dateofissuance;
-            Diver = diver;
-            CertificateLevel = certificatelevel;
+
         }
     }
 }

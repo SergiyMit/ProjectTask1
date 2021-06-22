@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class Admin : User, IInfo
+    public partial class Admin : User, IInfo
     {
-        private readonly int IdAdmin;
+        public int IdAdmin { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int PersonalAccessCode { get; set; }
+        public int? PersonalAccessCode { get; set; }
+        public int? IdUser { get; set; }
+        public virtual User IdUserNavigation { get; set; }
+
 
         public Admin(string name, string surname, int personalaccesscode, string login, string password) : base(login, password, 2)
         {

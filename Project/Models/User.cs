@@ -9,10 +9,19 @@ namespace Lecture2.Models
 {
     public class User : IInfo
     {
-        private int IdUser;
+        public User()
+        {
+            Admins = new HashSet<Admin>();
+            Divers = new HashSet<Diver>();
+        }
+
+        public int IdUser { get; set; }
         public string Login { get; set; }
-        public string Password { private get; set; }
-        private readonly int UserType;
+        public string Password { get; set; }
+        public int UserType { get; set; }
+
+        public virtual ICollection<Admin> Admins { get; set; }
+        public virtual ICollection<Diver> Divers { get; set; }
         protected User(string login, string password, int type)
         {
             Login = login;

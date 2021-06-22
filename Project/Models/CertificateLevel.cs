@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class CertificateLevel
+    public partial class CertificateLevel
     {
-        private int IdLevel;
+        public CertificateLevel()
+        {
+            DiveCertificates = new HashSet<DiveCertificate>();
+        }
+
+        public int IdLevel { get; set; }
         public string LevelName { get; set; }
-        public int MaxAllowedDeep { get; set; }
-        public int RequiredDives { get; set; }
+        public int? MaxAllowedDeep { get; set; }
+        public int? RequiredDives { get; set; }
         public string AdditionalInfo { get; set; }
+
+        public virtual ICollection<DiveCertificate> DiveCertificates { get; set; }
 
         public CertificateLevel(string levelname, int maxalloweddeep, int requireddives, string additionalinfo)
         {

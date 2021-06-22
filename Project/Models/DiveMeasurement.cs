@@ -6,29 +6,30 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class DiveMeasurement
+    public partial class DiveMeasurement
     {
-        private int IdMeasurement;
-        public Diver Diver { get; set; }
-        public int MaxDiveDeep { get; set; }
-        public int DiveTime { get; set; }
-        public decimal WaterTemperature { get; set; }
-        public DateTime DateOfDive { get; set; }
-        public DiveMeasurement(int maxdivedeep, int divetime, decimal watertemperature, Diver diver, DateTime date)
+        public int IdMeasurement { get; set; }
+        public int? MaxDiveDeep { get; set; }
+        public int? DiveTime { get; set; }
+        public decimal? WaterTemperature { get; set; }
+        public DateTime? DateOfDive { get; set; }
+        public int? IdDiver { get; set; }
+        public virtual Diver IdDiverNavigation { get; set; }
+
+        public DiveMeasurement(int maxdivedeep, int divetime, decimal watertemperature, DateTime date)
         {
-            Diver = diver;
             MaxDiveDeep = maxdivedeep;
             DiveTime = divetime;
             WaterTemperature = watertemperature;
             DateOfDive = date;
         }
-        public void ExceededDeep(Boolean exceedOrNo)
+      /*  public void ExceededDeep(Boolean exceedOrNo)
         {
             if (exceedOrNo)
             {
                 Notification notification = new Notification("Deep excided", "You exceed your deep", this.Diver);
             }
-        }
+        }*/
 
         public void GetInfo()
         {

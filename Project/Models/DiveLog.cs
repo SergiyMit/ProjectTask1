@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture2.Models
 {
-    public class DiveLog : IInfo
+    public partial class DiveLog : IInfo
     {
         private int IdDive;
         public int WeightsAmount { get; set; }
